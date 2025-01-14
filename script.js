@@ -16,7 +16,7 @@
                     .innerHTML = score.Tie;
 
                     document.querySelector('.js-result')
-                    .innerHTML = 'Done!';
+                    .innerHTML = 'Score has been reset!';
     
                 }
                
