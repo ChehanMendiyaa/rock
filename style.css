@@ -46,6 +46,8 @@ body {
     background-color: #9E9E9E;
     margin-top: 20px;
   }
+  .auto-play-button {
+      background-color: rgb(201,108,32);
 
   .result {
     margin-top: 20px;
