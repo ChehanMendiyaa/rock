@@ -1,5 +1,5 @@
 let score = JSON.parse(localStorage.getItem('score')) || { win: 0, lose: 0, tie: 0 };
-
+updateScoreDisplay();
     function resetScore() {
         score = { win: 0, lose: 0, tie: 0 };
         localStorage.setItem('score', JSON.stringify(score));
