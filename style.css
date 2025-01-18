@@ -1,6 +1,6 @@
 body {
     font-family: Arial;
-    background-color: #9b9797;
+    background-color: lightgray;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,15 +39,16 @@ body {
   }
 
   .scissors-button {
-    background-color: #f44336;
+    background-color: tomato;
   }
 
   .reset-button {
     background-color: #9E9E9E;
     margin-top: 20px;
   }
+
   .auto-play-button {
-      background-color: rgb(201,108,32);
+    background-color: rgb(201, 108, 32);
   }
 
   .result {
@@ -59,7 +60,7 @@ body {
   .js-result {
     font-family: Arial, Helvetica;
     font-weight: bold;
-    color: ;
+    
   }
 
   .rock-img{
