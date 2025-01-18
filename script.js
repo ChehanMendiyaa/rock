@@ -23,7 +23,7 @@
                     } else {
                         clearInterval(intervalId);
                         isAutoPlaying = false;
-                    }
+                    } return PlayerMove;
                 }
                
                
