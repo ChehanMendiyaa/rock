@@ -2,32 +2,43 @@
 <html>
 <head>
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-   
 </head>
 <body>
 
-<div class="game-container">
+  <div class="game-container">
     <h1>Rock Paper Scissors</h1>
 
-    <button class="rock-button" onclick="playGame('rock')">Rock</button>
-    <button class="paper-button" onclick="playGame('paper')">Paper</button>
-    <button class="scissors-button" onclick="playGame('scissors')">Scissors</button>
+    <button class="rock-button" onclick="playGame('rock');" > Rock </button>
+
+    <button class="paper-button" onclick="playGame('paper');">Paper </button>
+
+    <button class="scissors-button" onclick="playGame('scissors');"> Scissors </button>
 
     <p class="js-result"></p>
 
-    <p>Wins: <span class="js-wins">0</span> Losses: <span class="js-losses">0</span> Ties: <span class="js-ties">0</span></p>
+    <p class="status"></p>
 
-    <button class="reset-button" onclick="resetScore()">Reset Score</button>
-    <button class="auto-play-button" onclick="autoPlay();">Auto Play</button>
-</div>
 
-<script src='script.js'></script></script>
+    <p>Wins: <span class="js-wins">0 </span> Losses: <span class="js-losses">0</span> Ties: <span class="js-ties">0</span></p>
 
-</body>
+    <button class="reset-button" 
+    onclick="resetScore(); localStorage.removeItem('score',JSON.stringify(score)); updateScore();">
+    Reset Score
+  </button>
+
+  <button class="auto-play-button" onclick="autoPlay();">Auto Play</button>
+    
+  </div>
+    
+
+   
+  <script src="script.js"></script>
+
+  </body>
 </html>
