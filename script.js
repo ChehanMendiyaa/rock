@@ -41,6 +41,22 @@
                         return 'scissors';
                     }
                 }
+    
+
+                document.querySelector('.js-rock-button')
+                 .addEventListeiner('click',() => {
+                     playGame('rock');
+                 });
+
+                document.querySelector('.js-paper-button')
+                 .addEventListeiner('click',() => {
+                     playGame('paper');
+                 });
+
+                document.querySelector('.js-scissors-button')
+                 .addEventListeiner('click',() => {
+                     playGame('scissors');
+                 });
 
                 function playGame(playerMove) {
                     let computerMove = pickComputerMove();
