@@ -6,7 +6,10 @@
                     score.Win = 0;
                     score.Lose = 0;
                     score.Tie = 0;
+                    document.querySelector('.js-result')
+                     .innerHTML = "Score reset successfully!"
                     updateScore();
+
                     
                 }
 
@@ -14,20 +17,23 @@
                 let intervalId;
 
                 function autoPlay() {
-                    if ( !isAutoPlaying ) {
+                    if ( !isAutoPlaying ) { 
                         intervalId = setInterval(function() {
                             let playerMove = pickComputerMove();
                             playGame(playerMove);
                         },1000);
-                      document.querySelector('.auto-play-button')
-                       .innerHTML = "Stop Play";
+
+                        document.querySelector('.auto-play-button')
+                         .innerHTML = "Stop Play";
+
                         isAutoPlaying = true;
                     } else {
                         clearInterval(intervalId);
                         isAutoPlaying = false;
-                      document.querySelector('.auto-play-button')
-                       .innerHTML = "Auto Play";
-                    } return PlayerMove;
+
+                        document.querySelector('.auto-play-button')
+                         .innerHTML = "Auto Play";
+                    }
                 }
                
                
@@ -41,22 +47,33 @@
                         return 'scissors';
                     }
                 }
-    
 
                 document.querySelector('.js-rock-button')
-                 .addEventListeiner('click',() => {
-                     playGame('rock');
+                 .addEventListener('click',() => {
+                    playGame('rock');
                  });
 
                 document.querySelector('.js-paper-button')
-                 .addEventListeiner('click',() => {
-                     playGame('paper');
+                 .addEventListener('click', () => {
+                    playGame('paper');
                  });
 
                 document.querySelector('.js-scissors-button')
-                 .addEventListeiner('click',() => {
-                     playGame('scissors');
+                 .addEventListener('click', () => {
+                    playGame('scissors');
                  });
+
+
+                document.body.addEventListener('keydown',(event) => {
+                    if (event.key === 'r') {
+                        playGame('rock');
+                    } else if (event.key === 's') {
+                        playGame('scissors');
+                    } else if (event.key === 'p') {
+                        playGame('paper');
+                    }
+                })
+            
 
                 function playGame(playerMove) {
                     let computerMove = pickComputerMove();
@@ -130,8 +147,3 @@
                     document.querySelector('.js-ties')
                     .innerHTML = score.Tie;
                 }
-
-                    
-
-
-                
